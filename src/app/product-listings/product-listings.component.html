@@ -1,39 +1,15 @@
 <div class="container">
   <br/>
   <div class="row">
-    <div class="col-sm">
+    <div *ngFor="let product of products" class="col-sm">
       <a  [routerLink]="['/detail']">
         <div class="card" style="width: 18rem;">
-          <img src="../../assets/img/placeholder-300-225.png" class="card-img-top" alt="...">
-        <div class="card-body">
-          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-        </div>
-      </div>
-     </a>
-    </div>
-    <div class="col-sm">
-        <div class="card" style="width: 18rem;">
-          <img src="../../assets/img/placeholder-300-225.png" class="card-img-top" alt="...">
-        <div class="card-body">
-          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+           <img src="../../assets/img/placeholder-300-225.png" class="card-img-top" alt="...">
+         <div class="card-body">
+           <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+         </div>
        </div>
-      </div>
-    </div>
-    <div class="col-sm">
-      <div class="card" style="width: 18rem;">
-        <img src="../../assets/img/placeholder-300-225.png" class="card-img-top" alt="...">
-      <div class="card-body">
-          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-      </div>
-      </div>
-    </div>
-    <div class="col-sm">
-        <div class="card" style="width: 18rem;">
-          <img src="../../assets/img/placeholder-300-225.png" class="card-img-top" alt="...">
-        <div class="card-body">
-          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-        </div>
-      </div>
+      </a>
     </div>
   </div>
 </div>
