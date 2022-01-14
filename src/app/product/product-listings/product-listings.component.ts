@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { products } from 'src/app/products';
-
+import { ProductService } from '../sharted/product.service';
 
 @Component({
   selector: 'app-product-listings',
@@ -12,10 +11,19 @@ export class ProductListingsComponent implements OnInit {
   products: any;
 
 
-  constructor() { }
+  constructor(private productService: ProductService) { }
 
   ngOnInit(): void {
-    this.products = products;
+
+    const productsObservable = this.productService.getProducts();
+
+    productsObservable.subscribe(
+      (data) => {
+        this.products = data;
+    },
+      (err) => {console.log('何かのエラー' + err)},
+    )
+
   }
 
 }
